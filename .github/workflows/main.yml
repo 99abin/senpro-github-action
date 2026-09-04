@@ -24,9 +24,9 @@ jobs:
       - run: npm i
       - run: npm run build
     
-    deploy:
-      needs: test-build
-      runs-on: ubuntu-latest
+  deploy:
+    needs: test-build
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -64,6 +64,3 @@ jobs:
               npm install;
               npm run build;
             }
-
-
-
